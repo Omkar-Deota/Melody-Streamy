@@ -9,7 +9,7 @@ from models import Item
 
 app = FastAPI()
 
-# Create tables on app startup (this is where your table is auto-created)
+# Create tables on app startup
 @app.on_event("startup")
 def on_startup():
     Base.metadata.create_all(bind=engine)
